@@ -1,17 +1,43 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Talvez isso vai sumir</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)"></ion-refresher>
+
+  <h2>Dados Bancarios</h2>
+  <form action=""></form>
+  <div class="conta">
+    <ion-list>
+      <ion-item>
+        <h2>{{conta.desc}}</h2>
+        <p>Conta: {{conta.numero}}<br>
+          Agencia: {{conta.agencia}}<br></p>
+        <p item-end class="saldoPos"><strong>{{conta.saldo}}R$</strong></p>
+          <script src="home.js">
+          HomePage.teste();
+          </script>
+      </ion-item>
+      <ion-item>
+        <h2>Itau</h2>
+        <p>Conta: 24422-3<br>
+          Agencia: 42212-12<br></p>
+        <p item-end class="saldoPos"><strong>50.000R$</strong></p>
+      </ion-item>
+      <ion-item>
+        <h2>Bradesco</h2>
+        <p>Conta: 28271-1<br>
+          Agencia: 67262-90<br></p>
+        <p item-end class="saldoNeg"><strong>-5.000R$</strong></p>
+      </ion-item>
+      <!--Fim do loop-->
+      <ion-item>
+        <h2><strong>TOTAL:</strong></h2>
+        <h2 item-end class="total"><strong>{{conta.totalSaldo}}R$</strong></h2>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
