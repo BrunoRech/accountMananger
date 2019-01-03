@@ -52,7 +52,7 @@ export class HomePage {
   carregarContas() {
     this.openLoading();
     //aqui vai o update das contas
-    this.contaProv.getContas().subscribe(
+    /*this.contaProv.getContas().subscribe(
       data => {
         console.log(data);
         this.listaContas = (data as any).results;
@@ -67,8 +67,16 @@ export class HomePage {
         console.log(error);
         this.closeLoading();
       }
-    )
-
+    )*/
+    
+    
+    
+    //deletar isso depois
+    this.closeLoading();
+    if (this.isRefreshing) {
+      this.refresher.complete();
+      this.isRefreshing = false;
+    }
 
   }
 }

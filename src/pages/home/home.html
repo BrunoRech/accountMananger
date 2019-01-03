@@ -1,39 +1,46 @@
-<ion-header>
+<!--<ion-header>
   <ion-navbar>
     <ion-title>Talvez isso vai sumir</ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header>-->
+
 
 <ion-content padding>
 
   <ion-refresher (ionRefresh)="doRefresh($event)"></ion-refresher>
 
-  <h2>Dados Bancarios</h2>
-  <form action=""></form>
+  <h2 style="text-align:center;">Dados Bancarios</h2>
   <div class="conta">
     <ion-list>
       <ion-item>
-        <h2>{{conta.desc}}</h2>
-        <p>Conta: {{conta.numero}}<br>
+        <h2 id="desc">{{conta.desc}}</h2>
+        <p id="desc">Conta: {{conta.numero}}<br>
           Agencia: {{conta.agencia}}<br></p>
-        <p item-end class="saldoPos"><strong>{{conta.saldo}}R$</strong></p>
-       </ion-item>
+        <p item-end class="saldo" id="positivo"><strong>{{conta.saldo}}R$</strong></p>
+      </ion-item>
       <ion-item>
-        <h2>Itau</h2>
+
+
+
+        <!--So coloquei essas abaixo para teste -->
+        <h2 id="desc">Itau e um nome muito grande para caber na tela</h2>
         <p>Conta: 24422-3<br>
           Agencia: 42212-12<br></p>
-        <p item-end class="saldoPos"><strong>50.000R$</strong></p>
+        <p item-end class="saldo" id="positivo"><strong>50.000R$</strong></p>
       </ion-item>
       <ion-item>
         <h2>Bradesco</h2>
         <p>Conta: 28271-1<br>
           Agencia: 67262-90<br></p>
-        <p item-end class="saldoNeg"><strong>-5.000R$</strong></p>
+        <p item-end class="saldo" id="negativo"><strong>-5.000R$</strong></p>
       </ion-item>
-      <!--Fim do loop-->
+
+
+
+      <!--Fora do loop-->
       <ion-item>
-        <h2><strong>TOTAL:</strong></h2>
-        <h2 item-end class="total"><strong>{{total.totalSaldo}}R$</strong></h2>
+        <h2 class="total" id="titulo"><strong>TOTAL:</strong></h2>
+        <h2 item-end class="total" id="valor"><strong>{{total.totalSaldo}}R$</strong></h2>
       </ion-item>
     </ion-list>
   </div>

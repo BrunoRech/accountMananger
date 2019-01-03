@@ -24,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule//importado
   ],
   bootstrap: [IonicApp],
   entryComponents: [

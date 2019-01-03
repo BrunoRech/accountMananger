@@ -1,27 +1,20 @@
 page-home {
-    p{
-        text-align: left;
-        font-size: 150%;
+
+    h2.total, p.saldo{
+       font-size: 120%; 
+      
     }
-    .button-inner{
-        color: rgb(10, 64, 243);
-        font-size: 150%;
-        font-family: Arial, Helvetica, sans-serif;
+    p.saldo#positivo{ 
+        color: green;
+        margin-bottom: 7px;
     }
 
-    p.saldoPos{
-        font-size: 150%;
-        background-color: transparent;
-        color: green;    
+    p.saldo#negativo{
+        color: red; 
+        margin-bottom: 7px;   
     }
 
-    p.saldoNeg{
-        font-size: 150%;
-        background-color: transparent;
-        color: red;
-    }
-
-    h2.total{
-        font-size: 150%;
+    h2.total#valor{
+        margin-bottom: 7px;
     }
 }
