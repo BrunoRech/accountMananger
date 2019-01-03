@@ -14,4 +14,8 @@ export class ContaProvider {
     console.log('Hello ContaProvider Provider');
   }
 
+  public getContas(){
+    return this.http.get("");
+  }
+
 }
