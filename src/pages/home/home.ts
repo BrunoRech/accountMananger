@@ -7,6 +7,7 @@ import { ContaProvider } from '../../providers/conta/conta';
   templateUrl: 'home.html',
   providers: [ContaProvider]
 })
+
 export class HomePage {
   listaContas = new Array<any>();
 
@@ -14,8 +15,9 @@ export class HomePage {
     numero: "03229-11",
     agencia: "1234-5",
     saldo: "130.000",
-    desc: "Banco do Brasil"
+    desc: "BANCO DO BRASIL"
   }
+
   total = {
     totalSaldo: "175.000"
   }
@@ -27,6 +29,7 @@ export class HomePage {
     public loadingCtrl: LoadingController,
     private contaProv: ContaProvider) {
   }
+
   openLoading() {//animacao do loading
     this.loader = this.loadingCtrl.create({
       content: "Carregando contas...",
@@ -37,6 +40,7 @@ export class HomePage {
   closeLoading() {
     this.loader.dismiss();
   }
+
   doRefresh(refresher: any) {
     this.refresher = refresher;
     this.isRefreshing = true;
@@ -47,6 +51,10 @@ export class HomePage {
     for (let conta of this.listaContas) {
       this.total.totalSaldo += conta.saldo;
     }
+  }
+
+  ionViewDidLoad() {
+    this.carregarContas();
   }
 
   carregarContas() {
@@ -68,9 +76,8 @@ export class HomePage {
         this.closeLoading();
       }
     )*/
-    
-    
-    
+
+
     //deletar isso depois
     this.closeLoading();
     if (this.isRefreshing) {
