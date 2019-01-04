@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      <h2 style="text-align:center;">Dados Bancarios</h2>
+    <ion-title style="text-align:center;">
+      Dados Bancarios
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,8 +10,6 @@
 <ion-content padding>
 
   <ion-refresher (ionRefresh)="doRefresh($event)"></ion-refresher>
-
-
   <ion-list>
     <ion-item>
       <h2 id="desc">{{conta.desc}}</h2>
@@ -40,5 +38,4 @@
       </ion-item>
     </ion-footer>
 </ion-list>
-  
 </ion-content>
