@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the LoginPage page.
@@ -21,5 +22,15 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
+
+  validate(){
+    /*pegar os valores dos campos
+    mandar para a validacao
+    caso erro retornar msg para a view*/
+
+    this.navCtrl.push(HomePage);
+  }
+
+  
 
 }

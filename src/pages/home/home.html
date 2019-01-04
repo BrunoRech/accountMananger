@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title style="text-align:center;">
+  <ion-navbar><!--hideBackButton-->
+    <ion-title class="title">
       Dados Bancarios
     </ion-title>
   </ion-navbar>
@@ -12,14 +12,14 @@
   <ion-refresher (ionRefresh)="doRefresh($event)"></ion-refresher>
   <ion-list>
     <ion-item>
-      <h2 id="desc">{{conta.desc}}</h2>
-      <p id="desc">Conta: {{conta.numero}}<br>
+      <h2>{{conta.desc}}</h2>
+      <p>Conta: {{conta.numero}}<br>
         Agencia: {{conta.agencia}}<br></p>
       <p item-end class="saldo" id="positivo"><strong>{{conta.saldo}}R$</strong></p>
     </ion-item>
     <ion-item>
       <!--So coloquei essas abaixo para teste -->
-      <h2 id="desc">Itau</h2>
+      <h2>Itau</h2>
       <p>Conta: 24422-3<br>
         Agencia: 42212-12<br></p>
       <p item-end class="saldo" id="positivo"><strong>50.000R$</strong></p>
@@ -33,7 +33,7 @@
   
     <ion-footer>
       <ion-item>
-        <h2 class="total" id="titulo"><strong>Somatorio:</strong></h2>
+        <h2 class="total" id="titulo"><strong>Saldo final:</strong></h2>
         <h2 item-end class="total" id="valor"><strong>{{total.totalSaldo}}R$</strong></h2>
       </ion-item>
     </ion-footer>
