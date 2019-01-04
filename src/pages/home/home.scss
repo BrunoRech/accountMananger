@@ -1,6 +1,6 @@
 page-home {
 
-    h2.total, p.saldo{
+    h2.total, #saldo{
        font-size: 120%;
        color:  rgb(70, 68, 68); 
     }
@@ -9,16 +9,10 @@ page-home {
         color:  rgb(70, 68, 68); 
     }
 
-    p.saldo#positivo{ 
-        color: green;
+    #saldo{
+        
         margin-bottom: -22px;
     }
-
-    p.saldo#negativo{
-        color: red; 
-        margin-bottom: -22px;
-    }
-
     h2.total#valor{
         margin-top: 4px;
     }
