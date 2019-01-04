@@ -15,7 +15,8 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-
+  private login;
+  private senha;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -23,7 +24,9 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  validate(){
+  validate(usuario,senha){
+    console.log(usuario,senha);
+    
     /*pegar os valores dos campos
     mandar para a validacao
     caso erro retornar msg para a view*/

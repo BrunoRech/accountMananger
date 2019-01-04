@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar><!--hideBackButton-->
+  <ion-navbar hideBackButton>
     <ion-title class="title">
       Dados Bancarios
     </ion-title>
@@ -10,32 +10,109 @@
 <ion-content padding>
 
   <ion-refresher (ionRefresh)="doRefresh($event)"></ion-refresher>
-  <ion-list>
-    <ion-item>
-      <h2>{{conta.desc}}</h2>
-      <p>Conta: {{conta.numero}}<br>
-        Agencia: {{conta.agencia}}<br></p>
-      <p item-end class="saldo" id="positivo"><strong>{{conta.saldo}}R$</strong></p>
-    </ion-item>
-    <ion-item>
-      <!--So coloquei essas abaixo para teste -->
-      <h2>Itau</h2>
-      <p>Conta: 24422-3<br>
-        Agencia: 42212-12<br></p>
-      <p item-end class="saldo" id="positivo"><strong>50.000R$</strong></p>
-    </ion-item>
-    <ion-item>
-      <h2>Bradesco</h2>
-      <p>Conta: 28271-1<br>
-        Agencia: 67262-90<br></p>
-      <p item-end class="saldo" id="negativo"><strong>-5.000R$</strong></p>
-    </ion-item>
+  <ion-item id="header" no-lines></ion-item><!--*ngFor= "let conta from this.listaContas"-->
+  <ion-item id="item" no-lines>
+    <h2>{{conta.desc}}</h2>
+    <p>Conta: {{conta.numero}}<br>
+      Agencia: {{conta.agencia}}<br></p>
+    <p item-end class="saldo" id="positivo"><strong>{{conta.saldo}}R$</strong></p>
+  </ion-item>
+
+  <!--So coloquei essas abaixo para teste -->
+  <ion-item id="item" no-lines>
+    <h2>Itau</h2>
+    <p>Conta: 24422-3<br>
+      Agencia: 42212-12<br></p>
+    <p item-end class="saldo" id="positivo"><strong>50.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Bradesco</h2>
+    <p>Conta: 28271-1<br>
+      Agencia: 67262-90<br></p>
+    <p item-end class="saldo" id="negativo"><strong>-5.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Itau</h2>
+    <p>Conta: 24422-3<br>
+      Agencia: 42212-12<br></p>
+    <p item-end class="saldo" id="positivo"><strong>50.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Bradesco</h2>
+    <p>Conta: 28271-1<br>
+      Agencia: 67262-90<br></p>
+    <p item-end class="saldo" id="negativo"><strong>-5.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Itau</h2>
+    <p>Conta: 24422-3<br>
+      Agencia: 42212-12<br></p>
+    <p item-end class="saldo" id="positivo"><strong>50.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Bradesco</h2>
+    <p>Conta: 28271-1<br>
+      Agencia: 67262-90<br></p>
+    <p item-end class="saldo" id="negativo"><strong>-5.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Itau</h2>
+    <p>Conta: 24422-3<br>
+      Agencia: 42212-12<br></p>
+    <p item-end class="saldo" id="positivo"><strong>50.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Bradesco</h2>
+    <p>Conta: 28271-1<br>
+      Agencia: 67262-90<br></p>
+    <p item-end class="saldo" id="negativo"><strong>-5.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Itau</h2>
+    <p>Conta: 24422-3<br>
+      Agencia: 42212-12<br></p>
+    <p item-end class="saldo" id="positivo"><strong>50.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Bradesco</h2>
+    <p>Conta: 28271-1<br>
+      Agencia: 67262-90<br></p>
+    <p item-end class="saldo" id="negativo"><strong>-5.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Itau</h2>
+    <p>Conta: 24422-3<br>
+      Agencia: 42212-12<br></p>
+    <p item-end class="saldo" id="positivo"><strong>50.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Bradesco</h2>
+    <p>Conta: 28271-1<br>
+      Agencia: 67262-90<br></p>
+    <p item-end class="saldo" id="negativo"><strong>-5.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Itau</h2>
+    <p>Conta: 24422-3<br>
+      Agencia: 42212-12<br></p>
+    <p item-end class="saldo" id="positivo"><strong>50.000R$</strong></p>
+  </ion-item>
+  <ion-item id="item" no-lines>
+    <h2>Bradesco</h2>
+    <p>Conta: 28271-1<br>
+      Agencia: 67262-90<br></p>
+    <p item-end class="saldo" id="negativo"><strong>-5.000R$</strong></p>
+  </ion-item>
+
+  <!--FIM DOS Testes-->
   
-    <ion-footer>
-      <ion-item>
+</ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-item class="footer" no-lines>
         <h2 class="total" id="titulo"><strong>Saldo final:</strong></h2>
         <h2 item-end class="total" id="valor"><strong>{{total.totalSaldo}}R$</strong></h2>
       </ion-item>
-    </ion-footer>
-</ion-list>
-</ion-content>
+    </ion-toolbar>
+  </ion-footer>

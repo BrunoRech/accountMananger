@@ -1,19 +1,22 @@
 page-home {
 
     h2.total, p.saldo{
-       font-size: 120%; 
+       font-size: 120%;
+       color:  rgb(70, 68, 68); 
+    }
+
+    .title{
+        color:  rgb(70, 68, 68); 
     }
 
     p.saldo#positivo{ 
         color: green;
         margin-bottom: -22px;
-        margin-right:-8px;
     }
 
     p.saldo#negativo{
         color: red; 
         margin-bottom: -22px;
-        margin-right:-8px;   
     }
 
     h2.total#valor{
@@ -23,5 +26,29 @@ page-home {
     .title{
         text-align:center;
         margin-left: -20px;
+    }
+
+    .footer{
+        border-top: solid;
+        border-top-width: 0.1px;
+        border-top-color: rgb(196, 194, 194);
+        
+    }
+
+    #item{
+        border-style:solid;
+        border-left-width:0.1px; 
+        border-right-width:0.1px;
+        border-bottom-width: 0.1px;
+        border-color:  rgb(196, 194, 194);
+    }
+
+    #header{
+        margin-left: 0px;
+        margin-bottom: 0px;
+        margin-top: -40px;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color:  rgb(196, 194, 194);
     }
 }

@@ -64,6 +64,7 @@ export class HomePage {
       data => {
         console.log(data);
         this.listaContas = (data as any).results;
+        console.log(this.listaContas);
         this.sumSaldo();
         this.closeLoading();
         if (this.isRefreshing) {
@@ -78,11 +79,15 @@ export class HomePage {
     )*/
 
 
+    ///////////
+
     //deletar isso depois
     this.closeLoading();
     if (this.isRefreshing) {
       this.refresher.complete();
       this.isRefreshing = false;
+      
+      //////////
     }
 
   }
